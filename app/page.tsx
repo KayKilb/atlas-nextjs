@@ -1,3 +1,5 @@
+"use server";
+
 import Image from "next/image";
 import placeholder from "@/assets/placeholder.svg";
 import Link from "next/link";
@@ -19,7 +21,6 @@ export default function Page() {
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <form
                 action={async () => {
-                  "use server";
                   await signIn("default", { redirectTo: "/ui" });
                 }}
               >
